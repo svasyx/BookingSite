@@ -11,16 +11,19 @@ namespace BookingSite
 
         protected string _address { get; set; } = null;
         protected double _square { get; set; } = 0;
+
+        protected double _pricePerDay { get; set;} = 0;
         public List<Dwelling> dwellings { get; set; } = null;
 
         public Dwelling()
         {
             _address = null;
             _square = 0;
+            _pricePerDay = 0;
             dwellings = new List<Dwelling>();
         }
 
-        public Dwelling(string address, double square)
+        public Dwelling(string address, double square,double pricePerDay)
         {
             if(!String.IsNullOrEmpty(address))
             {
@@ -28,11 +31,12 @@ namespace BookingSite
             }
             
             _square = square;
+            _pricePerDay = pricePerDay; 
 
             dwellings = new List<Dwelling>();
         }
 
-        public Dwelling(string address, double square, List<Dwelling> dwellings) : this(address, square)
+        public Dwelling(string address, double square,double pricePerDay, List<Dwelling> dwellings) : this(address, square,pricePerDay)
         {
             if (!String.IsNullOrEmpty(address))
             {
@@ -40,6 +44,7 @@ namespace BookingSite
             }
 
             _square = square;
+            pricePerDay = pricePerDay;
 
             this.dwellings = dwellings;
         }
@@ -56,6 +61,11 @@ namespace BookingSite
 
             return _square;
         }
+        public double GetPrice()
+        {
+
+            return _pricePerDay;
+        }
 
         public List<Dwelling> GetList()
         {
@@ -66,7 +76,7 @@ namespace BookingSite
         public virtual string GetString()
         {
 
-            return $"Address: {_address} and square: {_square} ";
+            return $"Address: {_address} and square: {_square} and price {_pricePerDay} ";
         }
 
     }

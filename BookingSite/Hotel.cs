@@ -8,7 +8,7 @@ namespace BookingSite
 {
     internal class Hotel: Dwelling
     {
-        public int _roomsNumber { get; set; } = 0;
+        protected int _roomsNumber { get; set; } = 0;
 
         public Hotel()
         {
@@ -20,7 +20,7 @@ namespace BookingSite
             _roomsNumber = roomsNumber;
         }
 
-        public Hotel(int roomsNumber, string address, double square) : base(address,square)
+        public Hotel(int roomsNumber, string address, double square, double pricePerDay) : base(address, square, pricePerDay)
         {
             _roomsNumber = roomsNumber;
         }
