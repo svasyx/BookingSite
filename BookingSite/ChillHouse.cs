@@ -8,7 +8,7 @@ namespace BookingSite
 {
     internal class ChillHouse: Dwelling
     {
-        protected string _goods { get; set; } = null;
+        protected string _goods { get; set; } = String.Empty;
 
         public ChillHouse()
         {
@@ -31,6 +31,17 @@ namespace BookingSite
                 _goods = goods;
             }
 
+        }
+
+        public void SetGoods(string goods)
+        {
+            _goods = goods;
+        }
+        public string GetGoods()
+        {
+            string goods = String.Empty;
+            goods = _goods;
+            return goods;
         }
 
         public override string GetString()

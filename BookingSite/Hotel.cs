@@ -25,6 +25,11 @@ namespace BookingSite
             _roomsNumber = roomsNumber;
         }
 
+        public void SetRoomsNumber(int roomsNumber)
+        {
+            _roomsNumber = roomsNumber;
+        }
+
         public int GetRoomsNumber()
         {
           return _roomsNumber;

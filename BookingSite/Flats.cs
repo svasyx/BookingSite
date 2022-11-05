@@ -24,7 +24,10 @@ namespace BookingSite
         {
             _bedroomsCount = bedroomsCount;
         }
-
+        public void SetBedRoomsNumber(int bedroomsNumber)
+        {
+            _bedroomsCount = bedroomsNumber;
+        }
         public int GetBedCount()
         {
             return _bedroomsCount;

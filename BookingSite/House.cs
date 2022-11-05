@@ -25,7 +25,11 @@ namespace BookingSite
             _flourCount = flourCount;
         }
 
-        public int GetBedCount()
+        public void SetFlourCount(int flourCount)
+        {
+            _flourCount = flourCount;
+        }
+        public int GetFlourCount()
         {
             return _flourCount;
         }
